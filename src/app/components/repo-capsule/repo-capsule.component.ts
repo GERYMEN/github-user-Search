@@ -27,6 +27,8 @@ export class RepoCapsuleComponent {
   searchValueChange(value:string):void{
     if(value.trim()!==''){ //if search query is not empty call the api
       this.repo_load(value);
+    }else{
+      this.repo_load();//call default function when clearing the searchbar
     }
   }
 

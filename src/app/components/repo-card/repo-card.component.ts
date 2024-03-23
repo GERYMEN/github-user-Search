@@ -4,7 +4,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NgFor,NgClass } from '@angular/common';
 import { ProfileService } from '../../services/profile.service';
-import { Observable } from 'rxjs';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { PageEvent } from '@angular/material/paginator';

@@ -1,40 +1,64 @@
-<div class="flex w-full bg-black flex-col md:flex-row border-r border-gray-600 ">
- 
-  <div class="w-full md:w-1/4  bg-zinc-800 px-4 md:pt-8 pt-4 md:min-h-screen ">
-
+<div class="flex w-full bg-black flex-col md:flex-row border-r border-gray-600">
+  <!-- Main container, splitted in two sections -->
+  <div class="w-full md:w-1/4 bg-zinc-800 px-4 md:pt-8 pt-4 md:min-h-screen gap-3">
+    <!-- Back button -->
     <a class="flex gap-2 py-4 cursor-pointer" routerLink="/">
       <mat-icon
-            aria-hidden="false"
-            aria-label="arrow_back"
-            fontIcon="arrow_back"
-            class="text-white"
-          ></mat-icon>
-    <span class="text-white font-medium"  >Back</span>
-    </a >
+        aria-hidden="false"
+        aria-label="arrow_back"
+        fontIcon="arrow_back"
+        class="text-white"
+      ></mat-icon>
+      <span class="text-white font-medium">Back</span>
+    </a>
 
-    <div class="flex flex-col justify-center">
-    <img class="md:h-18 md:w-18  rounded-full ring-2 ring-gray-300" src={{profileAvatar}} alt px-4="">
-    <h4 class="text-white text-lg font-medium py-4 px-4">{{username}}</h4>
-    
-    
+    <!-- User profile section -->
+    <div class="flex flex-col justify-center border-b border-gray-600 pb-2">
+      <!-- User avatar -->
+      <img
+        class="md:h-18 md:w-18 rounded-full ring-2 ring-gray-300"
+        src="{{ profileAvatar }}"
+        alt
+        px-4=""
+      />
+      <!-- User name -->
+      <h4 class="text-white text-lg font-medium py-4 px-4">{{ username }}</h4>
+      <!-- Total number of public repositories -->
+      <h5 class="text-white text-base font-medium  px-4 pb-2">
+        Public Repository : {{ totalrepo }}
+      </h5>
+    </div>
+
+    <!-- User bio section -->
+    <div class="border-b border-gray-600 py-4">
+      <h5 class="text-white text-md font-medium px-4 pb-2 gap-4">Bio</h5>
+
+      <!-- User bio content -->
+      <div class="w-full mx-2 px-1 my-3">
+        <p class="text-slate-400 text-sm font-normal px-1">{{ bio }}</p>
+      </div>
+    </div>
+
+    <!-- User top gist section -->
+    <div>
+      <h5 class="text-white text-md font-medium px-4 pb-2 gap-4 my-3">
+        Top Gist
+      </h5>
+      <!-- Display each gist description if it exists -->
+      @for (item of gist; track $index) { @if(item.description){
+      <div class="w-full mx-2 border border-gray-300 rounded-lg px-1 py-2 my-3">
+        <p class="text-slate-400 text-sm font-normal px-1">
+          {{ item.description }}
+        </p>
+      </div>
+      } }
+    </div>
   </div>
- <div> <h5 class="text-white text-md font-medium px-4 pb-2 gap-4 ">Top Gist</h5>
-  @for (item of gist; track $index) {
-    @if(item.description){
- <div class="w-full mx-2 border border-gray-300 rounded-lg px-1 py-2 my-3">
-  <p class="text-slate-400 text-sm font-normal px-1">{{item.description}}</p>
- </div>   }
-}
-    
-  </div>
-</div>
-  <div class=" w-full md:3/4  bg-black px-4 pt-5 md:min-h-screen">
-    
+  <!-- Second section, displaying user repositories -->
+  <div class="w-full md:3/4 bg-black px-4 pt-5 md:min-h-screen">
     <h1 class="text-white text-2xl font-medium">Profile</h1>
-    <!-- <app-repo-capsule></app-repo-capsule> -->
-    <app-repo-card/>
-    
+    <!-- Display each repository -->
+    <app-repo-card />
   </div>
 </div>
-  
 
