@@ -1,0 +1,24 @@
+
+    <!-- Sidebar -->
+    <div class="mt-10 mx-4">
+        <div class="justify-between flex items-center">
+            <h6 class="text-white font-medium text-base">Top Repositories</h6>
+            <button mat-button class="bg-green-600 text-white flex items-center px-1.5 text-xs p-1  rounded-md" >
+                <mat-icon class="text-base" >folder</mat-icon>
+                New
+              </button>
+
+              
+            </div>
+            <input
+            type="text"
+            class="w-full mt-3 bg-black focus:outline-none focus:ring-100 focus:ring-gray text-white placeholder-white border focus:border-gray-500 focus:ring-2 border-gray-600 text-sm rounded-lg  block  pl-5 p-1.5 "
+            placeholder="Find a repository"
+          />
+          @for (user of reposLink; track user) {
+            <app-repo-capsule></app-repo-capsule>
+          }
+        <!-- <app-repo-capsule></app-repo-capsule> -->
+      <!-- Sidebar content goes here -->
+    </div>
+  
