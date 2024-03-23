@@ -11,13 +11,13 @@ Search Functionality (Bonus): Users can search for different GitHub users within
 Getting Started
 To run the application locally, follow these steps:
 
-Clone the repository: git clonehttps://github.com/GERYMEN/github-user-Search.git
+Clone the repository: git clone https://github.com/GERYMEN/github-user-Search.git
 Navigate to the project directory: cd githubService
 Install dependencies: npm install
 Start the development server: ng serve
 Open your browser and navigate to http://localhost:4200/
 Deployment
-The application is deployed and hosted on [GitHub Pages/Netlify/etc.]. You can access the live version at [deployment-url].
+The application is deployed and hosted on [GitHub Pages/Netlify/etc.]. You can access the live version at https://github-service-gerymen-mohammed-sirajs-projects.vercel.app?_vercel_share=mPQIIMgCGDDFaxOdLHui5gWEiOVUesIE
 
 Technologies Used
 Angular
