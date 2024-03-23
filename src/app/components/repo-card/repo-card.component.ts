@@ -59,6 +59,7 @@ export class RepoCardComponent implements OnInit{
       {
 
         next: (data: any) => {
+          console.log(data)
           this.repodata=data
           this.repoLength=data.length
           this.paginatedRepoData=this.repodata.slice(0,10)
