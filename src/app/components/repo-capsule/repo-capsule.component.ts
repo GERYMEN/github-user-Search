@@ -40,7 +40,7 @@ export class RepoCapsuleComponent {
         this.api_loading = false;
       },
       error: (err: any) => {
-        console.error('Error in Cart API call', err);
+        console.error('Error in user api call', err);
         this.api_loading = true;
         this.api_error = true;
       },

@@ -40,10 +40,7 @@ export class ProfilePageComponent {
   // Total number of repositories
   totalrepo: string = '';
 
-  /**
-   * Constructor to get the ActivatedRoute object
-   * @param route - ActivatedRoute object
-   */
+  
   constructor(private route: ActivatedRoute) {}
 
   /**
